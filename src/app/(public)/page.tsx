@@ -6,7 +6,7 @@ export default function Home() {
     <div>
       <Navbar/>
       
-      <h1 className="flex justify-center items-center text-center text-6xl font-bold border-0 text-green m-10"> Hi, i'm SHOAIB MUNIR</h1>
+      <h1 className="flex justify-center items-center text-center text-6xl font-bold border-0 text-green m-10"> Hi, i am SHOAIB MUNIR</h1>
 
         <div className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
           <div className="md:flex">
