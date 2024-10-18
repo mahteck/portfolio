@@ -7,17 +7,6 @@ export default function Home() {
       <Navbar/>
       
       <h1 className="flex justify-center items-center text-center text-6xl font-bold border-0 text-green m-10"> Hi, i'm SHOAIB MUNIR</h1>
-      {/* <div className="flex justify-center items-center text-center text-1xl border-1 font-bold text-green m-10">
-        <Image src="/images/about.jpg" alt="My Profile Picture" width={10} height={10} layout="responsive"></Image>
-      </div> */}
-      {/* <div style={{ position: "relative", width: "100%", paddingBottom: "10%" }} >
-        <Image
-        alt="shoaib Munir"
-        src="/images/about.jpg"
-        layout="fill"
-        objectFit="contain" // Scale your image down to fit into the container
-        />
-      </div> */}
 
         <div className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
           <div className="md:flex">
@@ -35,7 +24,7 @@ export default function Home() {
 
         <a href="/projects" className="block mt-1 text-lg leading-tight font-medium text-white hover:underline"><h1 className="flex justify-center items-center text-center text-6xl font-bold border-0 text-green m-10">My Projects</h1></a>
 
-<div id="main" className="grid grid-rows-2 grid-flow-col"> 
+      <div id="main" className="grid grid-rows-2 grid-flow-col"> 
         <div className="bg-gray-200 rounded-lg m-4 h-30">
           <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div className="md:flex">
@@ -81,16 +70,16 @@ export default function Home() {
             </div>
         </div> 
 
-  <div className="bg-gray-200 rounded-lg m-4 h-30">
-    <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-      <div className="md:flex">
-        <div className="md:shrink-0">
-          <img
-            className="h-48 w-full object-cover md:h-full md:w-32" 
-            src="/images/about.jpg" 
-            alt="Profile Picture" 
-          />
-        </div>
+    <div className="bg-gray-200 rounded-lg m-4 h-30">
+      <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div className="md:flex">
+          <div className="md:shrink-0">
+            <img
+              className="h-48 w-full object-cover md:h-full md:w-32" 
+              src="/images/about.jpg" 
+              alt="Profile Picture" 
+            />
+          </div>
 
         <div className="p-8">
           <div className="uppercase tracking-wide text-sm text-black font-semibold">
@@ -108,13 +97,7 @@ export default function Home() {
 </div>
         
 </div> 
-
-    {/* <div className="bg-green-200 p-4 mx-16 space-y-4">
-        <span className="inline-block w-32 h-12 bg-green-500 rounded-lg">service 1</span>
-        <span className="inline-block w-32 h-12 bg-green-500 rounded-lg">service 2</span>
-        <span className="inline-block w-32 h-12 bg-green-500 rounded-lg">service 3</span>
-    </div> */}
-      
+     
 </div>
   );
 }
