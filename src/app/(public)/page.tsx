@@ -10,7 +10,7 @@ export default function Home() {
         <div className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
           <div className="md:flex">
             <div className="md:shrink-0">
-              <img className="h-48 w-full object-cover md:h-full md:w-48" src="/images/about.jpg" alt="profile Picture"/>
+              <img className="h-48 w-full object-cover md:h-full md:w-48" src="/images/shoaib.png" alt="profile Picture"/>
             </div>
             
               <div className="p-8">
@@ -27,8 +27,12 @@ export default function Home() {
         <div className="bg-gray-200 rounded-lg m-4 h-30">
           <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div className="md:flex">
-              <div className="md:shrink-0">
-                <img className="h-48 w-full object-cover md:h-full md:w-30" src="/images/about.jpg" alt="profile Picture"/>
+            <div className="md:shrink-0">
+                <img
+                  className="h-48 w-full object-cover md:h-full md:w-32" 
+                  src="/images/expense.png" 
+                  alt="Profile Picture" 
+                  />                
               </div>
 
               <div className="p-8">
@@ -42,8 +46,12 @@ export default function Home() {
         <div className="bg-gray-200 rounded-lg m-4 h-30">
         <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
             <div className="md:flex">
-              <div className="md:shrink-0">
-                <img className="h-48 w-full object-cover md:h-full md:w-30" src="/images/about.jpg" alt="profile Picture"/>
+            <div className="md:shrink-0">
+                <img
+                  className="h-48 w-full object-cover md:h-full md:w-32" 
+                  src="/images/mis.jpg" 
+                  alt="Profile Picture" 
+                  />                
               </div>
 
                 <div className="p-8">
@@ -58,8 +66,12 @@ export default function Home() {
           <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
               <div className="md:flex">
                 <div className="md:shrink-0">
-                  <img className="h-48 w-full object-cover md:h-full md:w-30" src="/images/about.jpg" alt="profile Picture"/>
-                </div>
+                <img
+                  className="h-48 w-full object-cover md:h-full md:w-32" 
+                  src="/images/school.png" 
+                  alt="Profile Picture" 
+                  />                
+              </div>
 
                   <div className="p-8">
                   <div className="uppercase tracking-wide text-sm text-black font-semibold">School Management System</div>
@@ -75,7 +87,7 @@ export default function Home() {
           <div className="md:shrink-0">
             <img
               className="h-48 w-full object-cover md:h-full md:w-32" 
-              src="/images/about.jpg" 
+              src="/images/gms.png" 
               alt="Profile Picture" 
             />
           </div>
