@@ -1,48 +1,85 @@
+"use client";
+
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 
 export default function About() {
-    return (
-        <div>
-        <Navbar/>
-        <h1 className="flex justify-center item-center text-yellow text-2xl font-bold text-center mb-4">About Us</h1>
+  return (
+    <div className="bg-black text-white min-h-screen">
+      <Navbar />
 
-        <div className="max-w-md mx-auto bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      {/* Title */}
+      <motion.h1
+        className="flex justify-center items-center text-teal-600 text-3xl font-bold text-center mb-8"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        About Me
+      </motion.h1>
 
-        <div className="md:flex">
-         
-            <div className="p-8">
-            <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">My Name is Shoaib Munir</div>
-            <br/>
-            <h1 className="flex justify-center item-center text-yellow text-2xl font-bold text-center mb-4">Career Summary</h1>
-              <ul className="mt-2 text-slate-500">
-                <li>15+ years of experience in the field of Application Development, ERP implementation.</li>
-                <li>Software programmer with history of productivity and successful project outcomes.</li>
-                <li>Enhanced the working ability of the existing business systems by using efficient Business Application.</li>
-                <li>Exploration of new techniques and methodologies in Business Software Development.</li>
-              </ul>
-              <div>
-                <h1 className="flex justify-center item-center text-yellow text-2xl font-bold text-center mb-4">Technical Profile</h1>
-                <p className="mt-2 text-slate-500">Projects:Business Reports - Using Power BI, School Management System, Gate Management System, Expense Management System, WEB APIs Using MVC, Corporate and eCommerce Websites.</p>
-                <p className="mt-2 text-slate-500">Language: VB.6, VB.NET, Flutter, ASP.NET, MVC, HTML, CSS,TypeScript, NextJs</p>
-              </div>
-              <br/>
-              <div>
-                <h1 className="flex justify-center item-center text-yellow text-2xl font-bold text-center mb-4">Field Experience</h1>
-                <p className="mt-2 text-slate-500">Company : Bays International as a Team Lead IT From January 2021 to Present.</p>
-                <p className="mt-2 text-slate-500">Company : Macpac Films Ltd as a AM MIS From November 2019 to January 2021.</p>
-                <p className="mt-2 text-slate-500">Company : Bays International as a AM MIS From Septemebr 2018 to October 2019.</p>
-                <p className="mt-2 text-slate-500">Company : Efrotech Services as a Software Engineer From March 2009 to August 2018.</p>
-              </div>
-              <div>
-                <h1 className="flex justify-center item-center text-yellow text-2xl font-bold text-center mb-4">Education Profile</h1>
-                <p className="mt-2 text-slate-500">Bachelor of Commerce From Govt. Jinnah College 2019</p>
-                <p className="mt-2 text-slate-500">Intermediate In Commerce From Govt. Jinnah College 2007</p>
-                <p className="mt-2 text-slate-500">Matric From National English Grammar School 2005</p>
-              </div>
+      {/* Card with animated sections */}
+      <div className="max-w-4xl mx-auto bg-gray-900 rounded-xl shadow-md overflow-hidden md:max-w-2xl p-6">
+        
+        {/* Name & Career Summary */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="mb-8">
+            {/* <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">My Name is Shoaib Munir</div> */}
+            {/* <br /> */}
+            <h2 className="text-teal-600 text-2xl font-bold mb-4">Career Summary</h2>
+            <ul className="mt-2 text-slate-500 list-disc pl-5">
+              <li>15+ years of experience in Application Development and ERP implementation.</li>
+              <li>Software programmer with a history of productivity and successful project outcomes.</li>
+              <li>Enhanced existing business systems using efficient business applications.</li>
+              <li>Exploration of new techniques and methodologies in Business Software Development.</li>
+            </ul>
           </div>
-        </div>
-      </div>
+        </motion.div>
+
+        {/* Technical Profile */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-teal-600 text-2xl font-bold mb-4">Technical Profile</h2>
+          <p className="mt-2 text-slate-500">Projects: Business Reports - Power BI, School Management System, Gate Management System, Expense Management System, Web APIs (MVC), Corporate and eCommerce Websites.</p>
+          <p className="mt-2 text-slate-500">Languages: VB6, VB.NET, Flutter, ASP.NET, MVC, HTML, CSS, TypeScript, Next.js</p>
+        </motion.div>
+
+        {/* Field Experience */}
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-teal-600 text-2xl font-bold mb-4">Field Experience</h2>
+          <p className="mt-2 text-slate-500">Company: Bays International as Team Lead IT (Jan 2021 – Present)</p>
+          <p className="mt-2 text-slate-500">Company: Macpac Films Ltd as AM MIS (Nov 2019 – Jan 2021)</p>
+          <p className="mt-2 text-slate-500">Company: Bays International as AM MIS (Sept 2018 – Oct 2019)</p>
+          <p className="mt-2 text-slate-500">Company: Efrotech Services as Software Engineer (Mar 2009 – Aug 2018)</p>
+        </motion.div>
+
+        {/* Education Profile */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-teal-600 text-2xl font-bold mb-4">Education Profile</h2>
+          <p className="mt-2 text-slate-500">Bachelor of Commerce - Govt. Jinnah College (2019)</p>
+          <p className="mt-2 text-slate-500">Intermediate in Commerce - Govt. Jinnah College (2007)</p>
+          <p className="mt-2 text-slate-500">Matric - National English Grammar School (2005)</p>
+        </motion.div>
 
       </div>
-    )
+    </div>
+  );
 }

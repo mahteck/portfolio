@@ -1,96 +1,80 @@
+"use client";
 import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 
-export default function Projects(){
-    return (
-    <div>
-    <Navbar/>
-    <h1 className="flex justify-center items-center text-center text-6xl font-bold border-0 text-green m-10">My Projects</h1>
+export default function Projects() {
+  const projects = [
+    {
+      title: "Expense Management System",
+      description: "Record your daily expenses with this user-friendly and responsive module.",
+      image: "/images/expense.png",
+      link: "/projects/expense-management"
+    },
+    {
+      title: "MIS Services",
+      description: "Create business reports with Power BI, including custom dashboards.",
+      image: "/images/mis.jpg",
+      link: "/projects/mis-services"
+    },
+    {
+      title: "Gate Management System",
+      description: "Track daily in/out gate passes and monitor visitors efficiently.",
+      image: "/images/gms.png",
+      link: "/projects/gate-management"
+    },
+    {
+      title: "Resume Builder",
+      description: "The Ultimate Online CV Builder",
+      image: "/images/resume-builder.png",
+      link: "/projects/resume-builder",
+    }
+  ];
 
-    <div id="main" className="grid grid-rows-2 grid-flow-col"> 
-        <div className="bg-gray-200 rounded-lg m-4 h-30">
-          <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-            <div className="md:flex">
-            <div className="md:shrink-0">
-                <img
-                  className="h-48 w-full object-cover md:h-full md:w-32" 
-                  src="/images/expense.png" 
-                  alt="Profile Picture" 
-                  />                
-              </div>
+  return (
+    <div className="bg-black min-h-screen text-white">
+      <Navbar />
 
-              <div className="p-8">
-                <div className="uppercase tracking-wide text-sm text-black font-semibold">Expense Management System</div>
-                <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Through the expense module, you can record your daily expenses. It is user-friendly and also responsive.</a>
-              </div>
-            </div>
-          </div>
-        </div> 
+      {/* <h1 className="flex justify-center items-center text-center text-5xl font-bold text-teal-600 mt-12 mb-8">
+        My Projects
+      </h1> */}
 
-        <div className="bg-gray-200 rounded-lg m-4 h-30">
-        <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-            <div className="md:flex">
-            <div className="md:shrink-0">
-                <img
-                  className="h-48 w-full object-cover md:h-full md:w-32" 
-                  src="/images/mis.jpg" 
-                  alt="Profile Picture" 
-                  />                
-              </div>
+        {/* Title */}
+        <motion.h1
+        className="flex justify-center items-center text-teal-600 text-3xl font-bold text-center mb-8"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        My Projects
+      </motion.h1>
 
-                <div className="p-8">
-                <div className="uppercase tracking-wide text-sm text-black font-semibold">MIS Services</div>
-                <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">I can create all types of business reports using Power BI, as well as custom dashboard reports.</a>
-              </div>
-            </div>
-          </div>
-        </div> 
-
-        <div className="bg-gray-200 rounded-lg m-4 h-30">
-          <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-              <div className="md:flex">
-                <div className="md:shrink-0">
-                <img
-                  className="h-48 w-full object-cover md:h-full md:w-32" 
-                  src="/images/school.png" 
-                  alt="Profile Picture" 
-                  />                
-              </div>
-
-                  <div className="p-8">
-                  <div className="uppercase tracking-wide text-sm text-black font-semibold">School Management System</div>
-                  <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Through the school management system, you can manage student records, teacher information, accounts, results, and payslips.</a>
-                </div>
-              </div>
-            </div>
-        </div> 
-
-    <div className="bg-gray-200 rounded-lg m-4 h-30">
-      <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-        <div className="md:flex">
-          <div className="md:shrink-0">
-            <img
-              className="h-48 w-full object-cover md:h-full md:w-32" 
-              src="/images/gms.png" 
-              alt="Profile Picture" 
-            />
-          </div>
-
-        <div className="p-8">
-          <div className="uppercase tracking-wide text-sm text-black font-semibold">
-            Gate Management System
-          </div>
-          <a 
-            href="#" 
-            className="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mb-12">
+        {projects.map((project, index) => (
+          <motion.a
+            key={index}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 100 }}
           >
-            Through the Gate Management System, you can track daily In/Out gate passes and monitor your visitors.
-          </a>
-        </div>
+            <img
+              className="object-cover w-full h-64 md:h-50"
+              src={project.image}
+              alt={project.title}
+            />
+            <div className="p-6">
+              <div className="uppercase tracking-wide text-sm font-semibold text-teal-600">
+                {project.title}
+              </div>
+              <p className="mt-1 text-md leading-tight text-gray-700">
+                {project.description}
+              </p>
+            </div>
+          </motion.a>
+        ))}
       </div>
     </div>
-</div>
-        
-</div> 
-    </div>
-    );
+  );
 }
