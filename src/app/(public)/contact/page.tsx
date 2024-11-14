@@ -17,15 +17,15 @@ export default function Contact() {
       user_name: name,
       user_email: email,
       message: message,
-      to_email: "shoaib1244@gmail.com", // Your Gmail address where you want to receive the email
+      to_email: "mahteckteach@gmail.com", // Your Gmail address where you want to receive the email
     };
 
     emailjs
       .send(
-        "gmail", // Service ID (from EmailJS)
-        "template_12345", // Template ID (from EmailJS)
+        "service_skpx1ss", // Service ID (from EmailJS)
+        "template_pli75hr", // Template ID (from EmailJS)
         templateParams,
-        "user_abc123" // User ID (from EmailJS)
+        "e42KwkE0Z12pUW3jf" // User ID (from EmailJS)
       )
       .then(
         (response) => {

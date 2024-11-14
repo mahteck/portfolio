@@ -11,13 +11,13 @@ export default function Home() {
       title: "Expense Management System",
       description: "Record your daily expenses with this user-friendly, responsive module.",
       image: "/images/expense.png",
-      link: "https://203.170.78.100:1142/",
+      link: "http://203.170.78.100:1142/login.aspx",
     },
     {
       title: "MIS Services",
       description: "Create business reports with Power BI, including custom dashboards.",
       image: "/images/mis.jpg",
-      link: "/projects/mis-services",
+      link: "https://orbitrax.macpac.com.pk/",
     },
     {
       title: "Gate Management System",
