@@ -8,25 +8,37 @@ export default function Projects() {
       title: "Expense Management System",
       description: "Record your daily expenses with this user-friendly and responsive module.",
       image: "/images/expense.png",
-      link: "/projects/expense-management"
+      link: "http://203.170.78.100:1142/"
     },
     {
       title: "MIS Services",
       description: "Create business reports with Power BI, including custom dashboards.",
       image: "/images/mis.jpg",
-      link: "/projects/mis-services"
+      link: "https://orbitrax.macpac.com.pk/"
     },
     {
       title: "Gate Management System",
       description: "Track daily in/out gate passes and monitor visitors efficiently.",
       image: "/images/gms.png",
-      link: "/projects/gate-management"
+      link: "https://ims.macpac.com.pk/Default.aspx#"
     },
     {
       title: "Resume Builder",
       description: "The Ultimate Online CV Builder",
       image: "/images/resume-builder.png",
-      link: "/projects/resume-builder",
+      link: "https://resume-builder-eta-tawny.vercel.app/",
+    },
+    {
+      title: "E-Commerce Store - Clothing",
+      description: "A modern online clothing store with seamless UI & secure payments.",
+      image: "/images/ecommerce1.png",
+      link: "https://ecommerce-website-tan-nine.vercel.app/",
+    },
+    {
+      title: "E-Commerce Store - furniture-ecommerce",
+      description: "The furniture brand for the future, with timeless designs.",
+      image: "/images/ecommerce2.png",
+      link: "https://avion-ecommerce-ten.vercel.app/",
     }
   ];
 
@@ -38,8 +50,8 @@ export default function Projects() {
         My Projects
       </h1> */}
 
-        {/* Title */}
-        <motion.h1
+      {/* Title */}
+      <motion.h1
         className="flex justify-center items-center text-teal-600 text-3xl font-bold text-center mb-8"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

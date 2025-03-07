@@ -31,14 +31,26 @@ export default function Home() {
       image: "/images/resume-builder.png",
       link: "https://resume-builder-eta-tawny.vercel.app/home.html",
     },
+    {
+      title: "E-Commerce Store - Clothing",
+      description: "A modern online clothing store with seamless UI & secure payments.",
+      image: "/images/ecommerce1.png",
+      link: "https://clothing-store.example.com",
+    },
+    {
+      title: "E-Commerce Store - furniture-ecommerce",
+      description: "The furniture brand for the future, with timeless designs.",
+      image: "/images/ecommerce2.png",
+      link: "https://ecommerce-website-tan-nine.vercel.app/",
+    },
   ];
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-gray-900 min-h-screen text-white">
       <Navbar />
 
       <motion.h1
-        className="flex justify-center items-center text-center text-5xl font-bold text-teal-400 my-12"
+        className="text-center text-5xl font-extrabold text-teal-400 my-12"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -46,57 +58,49 @@ export default function Home() {
         Hi, I am SHOAIB MUNIR
       </motion.h1>
 
-      {/* About Section with Circular Image */}
-      <div className="max-w-6xl mx-auto bg-teal-800 rounded-xl shadow-lg overflow-hidden md:flex mb-12 transform transition-all duration-300 hover:scale-105">
-        
-        {/* Profile Image (Circular) */}
+      {/* About Section */}
+      <div className="max-w-6xl mx-auto bg-gray-800 rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-8 mb-12 transform transition-all duration-300 hover:scale-105">
         <motion.img
-          className="object-cover rounded-full w-72 h-72 mx-auto md:mx-0"
+          className="rounded-full w-40 h-40 border-4 border-teal-400"
           src="/images/shoaib.png"
           alt="Profile Picture"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         />
-        
-        {/* About Text */}
-        <div className="p-8">
+
+        <div>
           <motion.div
-            className="uppercase tracking-wide text-sm text-teal-500 font-semibold"
+            className="text-lg text-teal-400 font-semibold"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
             About Myself
           </motion.div>
-          
-          <motion.a
-            href="/about"
-            className="block mt-4 text-lg leading-tight font-medium text-gray-300 hover:no-underline"
+          <motion.p
+            className="mt-4 text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            My name is Shoaib Munir, and I have graduated in both Science and Commerce. I have over 15+ years of experience in Application Development, ERP implementation, and more. 
-            <span className="text-teal-400"> Read more about me →</span>
-          </motion.a>
+            My name is Shoaib Munir, and I have over 15+ years of experience in Application Development, ERP implementation, and more.
+            <a href="/about" className="text-teal-400"> Read more about me →</a>
+          </motion.p>
         </div>
       </div>
 
-      <a href="/projects" className="block text-center">
-        <motion.h1
-          className="text-4xl font-bold text-teal-400 hover:text-teal-300 my-10"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          View My Projects
-        </motion.h1>
-      </a>
-
       {/* Projects Section */}
-      {/* <h2 className="text-4xl font-bold text-teal-700 text-center mt-10">My Projects</h2> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mt-10">
+      <motion.h2
+        className="text-center text-4xl font-bold text-teal-400 mb-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        My Projects
+      </motion.h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
