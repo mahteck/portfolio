@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 
 import Link from "next/link";
@@ -66,18 +65,5 @@ export default function Navbar() {
       </nav>
     </header>
   );
-=======
-import Link from "next/link";
-import React from "react";
-
-export default function Page(){
-    return (
-        <nav className="flex justify-center item-right bg-black border-0 border-white-900 p-1 font-bold">
-            <Link className="hover:text-red-500" href="/">Home</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link className="hover:text-red-600" href="/about">About</Link>&nbsp;|&nbsp;&nbsp;
-            <Link className="hover:text-red-600" href="/projects">Project</Link>&nbsp;|&nbsp;&nbsp;
-            <Link className="hover:text-red-600" href="/contact">Contact</Link>
-        </nav>
-    )
->>>>>>> 6b1013b0fd6ee5b60fcfa390670b1cb09d0ed25f
 }
+

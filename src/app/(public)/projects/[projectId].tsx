@@ -1,21 +1,27 @@
-import { useRouter } from 'next/router';
+interface ProjectDetailPageProps {
+  params: {
+    projectId: string;
+  };
+}
 
-const ProjectDetail = () => {
-  const router = useRouter();
-  const { projectId } = router.query; // This will be the dynamic part of the URL
+export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+  const { projectId } = params;
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <h1 className="text-4xl font-bold text-center my-12">
-        {projectId ? `Project Details: ${projectId}` : "Loading..."}
-      </h1>
+    <div className="min-h-screen bg-transparent text-white">
+      <div className="mx-auto max-w-4xl pb-14 pt-8">
+        <h1 className="text-center text-3xl font-bold text-teal-300 sm:text-4xl">
+          Project Details: {projectId}
+        </h1>
 
-      {/* Here, you can add more content specific to the project */}
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden p-8">
-        <p>Details about the project {projectId} will go here.</p>
+        <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-slate-950/70 p-6 text-sm text-slate-200 shadow-xl backdrop-blur sm:p-8">
+          <p>
+            This dynamic project detail page is ready to display more
+            information about the selected project. You can extend this section
+            with screenshots, tech stack, responsibilities, and links.
+          </p>
+        </div>
       </div>
     </div>
   );
-};
-
-export default ProjectDetail;
+}

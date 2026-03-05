@@ -3,36 +3,22 @@
 @tailwind utilities;
 
 :root {
-<<<<<<< HEAD
   --background: #020617;
   --foreground: #e5e7eb;
-=======
-  --background: #ffffff;
-  --foreground: #171717;
->>>>>>> 6b1013b0fd6ee5b60fcfa390670b1cb09d0ed25f
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-<<<<<<< HEAD
     --background: #020617;
     --foreground: #e5e7eb;
-=======
-    --background: #0a0a0a;
-    --foreground: #ededed;
->>>>>>> 6b1013b0fd6ee5b60fcfa390670b1cb09d0ed25f
   }
 }
 
 body {
   color: var(--foreground);
-<<<<<<< HEAD
+  background: var(--background);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-=======
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
->>>>>>> 6b1013b0fd6ee5b60fcfa390670b1cb09d0ed25f
 }
 
 @layer utilities {
